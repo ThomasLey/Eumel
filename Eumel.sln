@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eumel.Domse.WebApi", "Eumel.Domse.WebApi\Eumel.Domse.WebApi.csproj", "{BCF78A88-E70D-4AC9-BB34-CC879E051EA7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eumel.Domse.ConsoleApp", "Eumel.Domse.ConsoleApp\Eumel.Domse.ConsoleApp.csproj", "{BEE99FB6-1089-417F-B8D1-E44C13196386}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eumel.ImageProcessing", "Eumel.ImageProcessing\Eumel.ImageProcessing.csproj", "{23079E47-D100-4B74-89A4-ED63CC3CF672}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{9FCBACBD-15BE-4297-AC9A-9EB4E7C64B72}"
+	ProjectSection(SolutionItems) = preProject
+		Add-Document.ps1 = Add-Document.ps1
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BCF78A88-E70D-4AC9-BB34-CC879E051EA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCF78A88-E70D-4AC9-BB34-CC879E051EA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCF78A88-E70D-4AC9-BB34-CC879E051EA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCF78A88-E70D-4AC9-BB34-CC879E051EA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEE99FB6-1089-417F-B8D1-E44C13196386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE99FB6-1089-417F-B8D1-E44C13196386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEE99FB6-1089-417F-B8D1-E44C13196386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEE99FB6-1089-417F-B8D1-E44C13196386}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23079E47-D100-4B74-89A4-ED63CC3CF672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23079E47-D100-4B74-89A4-ED63CC3CF672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23079E47-D100-4B74-89A4-ED63CC3CF672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23079E47-D100-4B74-89A4-ED63CC3CF672}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B37978CE-5068-4DE9-951D-3FF2C7028121}
+	EndGlobalSection
+EndGlobal
