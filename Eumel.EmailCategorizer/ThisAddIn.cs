@@ -8,17 +8,6 @@ namespace Eumel.EmailCategorizer
 {
     public partial class ThisAddIn
     {
-        #region ServiceLocator
-
-        internal static class ServiceLocator
-        {
-            public static ITopicPersister TopicPersister { get; internal set; }
-
-            public static IConfigPersister ConfigPersister { get; internal set; }
-        }
-
-        #endregion
-
         private const string CategorizerDataStore = "Softwarekueche.Categorizer";
 
         private void ThisAddIn_Shutdown(object sender, EventArgs e)
@@ -43,7 +32,7 @@ namespace Eumel.EmailCategorizer
 
         #region ItemSent EventHandler
 
-        void Application_ItemSend(object Item, ref bool Cancel)
+        private void Application_ItemSend(object Item, ref bool Cancel)
         {
             var mail = Item as MailItem;
             if (mail == null) return;
@@ -79,16 +68,27 @@ namespace Eumel.EmailCategorizer
         #region VSTO generated code
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        ///     Required method for Designer support - do not modify
+        ///     the contents of this method with the code editor.
         /// </summary>
         // ReSharper disable RedundantDelegateCreation
         private void InternalStartup()
         {
-            this.Startup += new System.EventHandler(ThisAddIn_Startup);
-            this.Shutdown += new System.EventHandler(ThisAddIn_Shutdown);
+            Startup += new EventHandler(ThisAddIn_Startup);
+            Shutdown += new EventHandler(ThisAddIn_Shutdown);
         }
         // ReSharper restore RedundantDelegateCreation
+
+        #endregion
+
+        #region ServiceLocator
+
+        internal static class ServiceLocator
+        {
+            public static ITopicPersister TopicPersister { get; internal set; }
+
+            public static IConfigPersister ConfigPersister { get; internal set; }
+        }
 
         #endregion
     }

@@ -16,7 +16,7 @@ namespace Eumel.EmailCategorizer
         {
             InitializeComponent();
 
-            this.DialogResult = DialogResult.Cancel;
+            DialogResult = DialogResult.Cancel;
         }
 
         public MailModDialog(EnhancedSubject subject)
@@ -46,22 +46,22 @@ namespace Eumel.EmailCategorizer
         {
             if (cboTopics.SelectedItem == null && !string.IsNullOrWhiteSpace(cboTopics.Text))
             {
-                var tmp = new Topic() { Title = cboTopics.Text };
+                var tmp = new Topic {Title = cboTopics.Text};
                 cboTopics.Items.Insert(0, tmp);
                 cboTopics.SelectedItem = tmp;
             }
 
-            _subject.Topic = (Topic)cboTopics.SelectedItem;
+            _subject.Topic = (Topic) cboTopics.SelectedItem;
             _subject.Subject = txtSubject.Text;
 
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            DialogResult = DialogResult.OK;
+            Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Abort;
-            this.Close();
+            DialogResult = DialogResult.Abort;
+            Close();
         }
 
         private void btnManageTopics_Click(object sender, EventArgs e)

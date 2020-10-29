@@ -15,20 +15,22 @@ namespace Eumel.EmailCategorizer
             Parse();
         }
 
-        private void Parse()
-        {
-            // get topic of email and remove topic
-            var tmpTopic = Subject.Between(_topicParserConfiguration.TopicStart, _topicParserConfiguration.TopicEnd).Trim();
-            Topic=new Topic() {Title = tmpTopic};
-
-            // get subject w/o topic
-            Subject = Subject.Replace(_topicParserConfiguration.TopicStart + tmpTopic + _topicParserConfiguration.TopicEnd, "")
-                .Trim()
-                .Replace("  ", " ").Replace("  ", " "); // replace all multiple spaces.
-        }
-
         public Topic Topic { get; set; }
 
         public string Subject { get; set; }
+
+        private void Parse()
+        {
+            // get topic of email and remove topic
+            var tmpTopic = Subject.Between(_topicParserConfiguration.TopicStart, _topicParserConfiguration.TopicEnd)
+                .Trim();
+            Topic = new Topic {Title = tmpTopic};
+
+            // get subject w/o topic
+            Subject = Subject
+                .Replace(_topicParserConfiguration.TopicStart + tmpTopic + _topicParserConfiguration.TopicEnd, "")
+                .Trim()
+                .Replace("  ", " ").Replace("  ", " "); // replace all multiple spaces.
+        }
     }
 }

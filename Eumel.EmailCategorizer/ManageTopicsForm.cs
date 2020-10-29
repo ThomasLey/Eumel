@@ -29,10 +29,11 @@ namespace Eumel.EmailCategorizer
         {
             if (string.IsNullOrWhiteSpace(textBox1.Text)) return;
 
-            if (lstTopics.Items.Cast<Topic>().Any(item => string.Compare(item.Title, textBox1.Text, StringComparison.CurrentCultureIgnoreCase) == 0))
+            if (lstTopics.Items.Cast<Topic>().Any(item =>
+                string.Compare(item.Title, textBox1.Text, StringComparison.CurrentCultureIgnoreCase) == 0))
                 return;
 
-            lstTopics.Items.Add(new Topic() { Title = textBox1.Text });
+            lstTopics.Items.Add(new Topic {Title = textBox1.Text});
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
@@ -49,8 +50,8 @@ namespace Eumel.EmailCategorizer
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
-            this.Close();
+            DialogResult = DialogResult.Cancel;
+            Close();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -58,8 +59,8 @@ namespace Eumel.EmailCategorizer
             var newTopics = lstTopics.Items.Cast<Topic>();
             ThisAddIn.ServiceLocator.TopicPersister.SetTopics(newTopics);
 
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            DialogResult = DialogResult.OK;
+            Close();
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Eumel.EmailCategorizer.Persister
         #region Implementation of IConfigPersister
 
         /// <summary>
-        /// get a list of topics
+        ///     get a list of topics
         /// </summary>
         public TopicParserConfiguration GetConfig()
         {
@@ -23,7 +23,7 @@ namespace Eumel.EmailCategorizer.Persister
         }
 
         /// <summary>
-        /// set a list of topics. this list replaces the existing list
+        ///     set a list of topics. this list replaces the existing list
         /// </summary>
         public void SetConfig(TopicParserConfiguration topicParserConfiguration)
         {
