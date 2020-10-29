@@ -41,7 +41,7 @@
     <PublishUrl>C:\Users\thoma\Desktop\emailCategorizer\</PublishUrl>
     <InstallUrl />
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.1.0.5</ApplicationVersion>
+    <ApplicationVersion>1.1.0.6</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
@@ -218,21 +218,15 @@
     can be found.
   -->
   <ItemGroup>
-    <Compile Include="CategorizerRibbon.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="CategorizerRibbon.cs" />
     <Compile Include="CategorizerRibbon.Designer.cs">
       <DependentUpon>CategorizerRibbon.cs</DependentUpon>
     </Compile>
-    <Compile Include="MailModDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="MailModDialog.cs" />
     <Compile Include="MailModDialog.Designer.cs">
       <DependentUpon>MailModDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageTopicsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="ManageTopicsForm.cs" />
     <Compile Include="ManageTopicsForm.Designer.cs">
       <DependentUpon>ManageTopicsForm.cs</DependentUpon>
     </Compile>
@@ -240,7 +234,7 @@
     <Compile Include="Persister\ITopicPersister.cs" />
     <Compile Include="Persister\OutlookPstConfigPersister.cs" />
     <Compile Include="Persister\OutlookPstTopicPersister.cs" />
-    <Compile Include="Persister\Topic.cs" />
+    <Compile Include="Model\Topic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -274,7 +268,7 @@
     </Compile>
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Persister\TopicParserConfiguration.cs" />
-    <Compile Include="EnhancedSubject.cs" />
+    <Compile Include="Model\EnhancedSubject.cs" />
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -290,7 +284,9 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="WpfUi\" />
+  </ItemGroup>
   <!-- Include the build rules for a C# project. -->
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -305,7 +301,7 @@
       <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
         <ProjectProperties HostName="Outlook" HostPackage="{29A7B9D7-A7F1-4328-8EF0-6B2D1A56B2C1}" OfficeVersion="15.0" VstxVersion="4.0" ApplicationType="Outlook" Language="cs" TemplatesPath="VSTOTemplates" DebugInfoExeName="#Software\Microsoft\Office\16.0\Outlook\InstallRoot\Path#outlook.exe" AddItemTemplatesGuid="{A58A78EB-1C92-4DDD-80CF-E8BD872ABFC4}" />
         <Host Name="Outlook" GeneratedCodeNamespace="Eumel.EmailCategorizer" PublishedHash="69C324AB27932AA2FBF2B7EA72250886FF164DE6" IconIndex="0">
-          <HostItem Name="ThisAddIn" Code="ThisAddIn.cs" CanonicalName="AddIn" PublishedHash="5177BF7FE2D5F9DFB3A9933CE6031FFAC81F4D46" CanActivate="false" IconIndex="1" Blueprint="ThisAddIn.Designer.xml" GeneratedCode="ThisAddIn.Designer.cs" />
+          <HostItem Name="ThisAddIn" Code="ThisAddIn.cs" CanonicalName="AddIn" PublishedHash="C94F0CED0B309B07BFEAAA968BD90AD634B65A02" CanActivate="false" IconIndex="1" Blueprint="ThisAddIn.Designer.xml" GeneratedCode="ThisAddIn.Designer.cs" />
         </Host>
       </FlavorProperties>
     </VisualStudio>

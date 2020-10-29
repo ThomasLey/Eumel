@@ -1,7 +1,7 @@
 using Eumel.EmailCategorizer.Extensions;
 using Eumel.EmailCategorizer.Persister;
 
-namespace Eumel.EmailCategorizer
+namespace Eumel.EmailCategorizer.Model
 {
     public class EnhancedSubject
     {

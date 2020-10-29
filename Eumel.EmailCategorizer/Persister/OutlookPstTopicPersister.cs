@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Eumel.EmailCategorizer.Model;
 using Microsoft.Office.Interop.Outlook;
 
 namespace Eumel.EmailCategorizer.Persister
@@ -8,8 +9,8 @@ namespace Eumel.EmailCategorizer.Persister
     internal class OutlookPstTopicPersister : ITopicPersister
     {
         private const string TopicDataString = "Topics";
-        private const string TopicTitleDescriptionSeperator = "??";
-        private const string TopicSeperator = "|";
+        private const string TopicTitleDescriptionSeparator = "??";
+        private const string TopicSeparator = "|";
 
         private readonly StorageItem _storage;
 
@@ -33,10 +34,10 @@ namespace Eumel.EmailCategorizer.Persister
             }
 
             var topicStrings = ((string) _storage.UserProperties[TopicDataString].Value)
-                .Split(new[] {TopicSeperator}, StringSplitOptions.RemoveEmptyEntries);
+                .Split(new[] {TopicSeparator}, StringSplitOptions.RemoveEmptyEntries);
 
             var topics = from t in topicStrings
-                let parts = (t + TopicTitleDescriptionSeperator).Split(new[] {TopicTitleDescriptionSeperator},
+                let parts = (t + TopicTitleDescriptionSeparator).Split(new[] {TopicTitleDescriptionSeparator},
                     StringSplitOptions.None)
                 select new Topic {Title = parts[0], Description = parts[1]};
 
@@ -49,24 +50,23 @@ namespace Eumel.EmailCategorizer.Persister
         public void SetTopics(IEnumerable<Topic> topics)
         {
             var topicStrings = from t in topics
-                select t.Title + TopicTitleDescriptionSeperator + t.Description;
+                select t.Title + TopicTitleDescriptionSeparator + t.Description;
 
-            var data = string.Join(TopicSeperator, topicStrings);
+            var data = string.Join(TopicSeparator, topicStrings);
 
-            _storage.UserProperties[TopicDataString].Value = string.Join(TopicSeperator, data);
+            _storage.UserProperties[TopicDataString].Value = string.Join(TopicSeparator, data);
             _storage.Save();
         }
 
         /// <summary>
         ///     add the topic to the store
         /// </summary>
-        // ReSharper disable PossibleMultipleEnumeration
         public void AddTopic(Topic topic)
         {
             // only for non-empty topics
             if (topic == null || string.IsNullOrWhiteSpace(topic.Title)) return;
 
-            var topics = GetTopics();
+            var topics = GetTopics().ToArray();
             var existingTopics = topics.Select(t => t.Title);
 
             if (existingTopics.Contains(topic.Title)) return;
@@ -74,7 +74,6 @@ namespace Eumel.EmailCategorizer.Persister
             var lst = topics.Concat(new[] {topic});
             SetTopics(lst);
         }
-        // ReSharper restore PossibleMultipleEnumeration
 
         #endregion
     }

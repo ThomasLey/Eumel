@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Eumel.EmailCategorizer.Model;
 
 namespace Eumel.EmailCategorizer.Persister
 {

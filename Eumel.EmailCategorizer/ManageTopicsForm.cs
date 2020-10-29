@@ -2,27 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using Eumel.EmailCategorizer.Model;
 using Eumel.EmailCategorizer.Persister;
 
-// ReSharper disable InconsistentNaming
 namespace Eumel.EmailCategorizer
 {
     public partial class ManageTopicsForm : Form
     {
-        private readonly IEnumerable<Topic> _topic;
+        private readonly Topic[] _topic;
 
         public ManageTopicsForm()
         {
             InitializeComponent();
 
-            _topic = ThisAddIn.ServiceLocator.TopicPersister.GetTopics();
+            _topic = ThisAddIn.ServiceLocator.TopicPersister.GetTopics().ToArray();
         }
 
         private void LoadTopics()
         {
             // add selected topic
             lstTopics.Items.Clear();
-            lstTopics.Items.AddRange(_topic.ToArray());
+            lstTopics.Items.AddRange(_topic);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

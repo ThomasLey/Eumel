@@ -3,7 +3,7 @@ using FluentAssertions;
 using NUnit.Framework;
 
 // ReSharper disable InconsistentNaming
-namespace Eumel.EmailCategorizer.Tests
+namespace Eumel.EmailCategorizer.Tests.Extensions
 {
     [TestFixture]
     public class StringExtensionTests

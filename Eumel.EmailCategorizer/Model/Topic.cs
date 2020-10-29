@@ -1,4 +1,4 @@
-﻿namespace Eumel.EmailCategorizer.Persister
+﻿namespace Eumel.EmailCategorizer.Model
 {
     /// <summary>
     ///     entity for a topic

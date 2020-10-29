@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Eumel.EmailCategorizer.Model;
 using Eumel.EmailCategorizer.Persister;
 using Microsoft.Office.Interop.Outlook;
 
