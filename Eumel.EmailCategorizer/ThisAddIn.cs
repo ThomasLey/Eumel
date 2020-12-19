@@ -1,8 +1,8 @@
-﻿using System;
-using System.Windows.Forms;
-using Eumel.EmailCategorizer.Model;
+﻿using Eumel.EmailCategorizer.Model;
 using Eumel.EmailCategorizer.Persister;
 using Microsoft.Office.Interop.Outlook;
+using System;
+using System.Windows.Forms;
 
 // ReSharper disable InconsistentNaming
 namespace Eumel.EmailCategorizer
@@ -20,11 +20,11 @@ namespace Eumel.EmailCategorizer
             var folder = Application.Session.GetDefaultFolder(OlDefaultFolders.olFolderInbox);
             var storage = folder.GetStorage(CategorizerDataStore, OlStorageIdentifierType.olIdentifyBySubject);
 
-            // initialize topic persister with StorageItem 
+            // initialize topic persister with StorageItem
             var configPersister = new OutlookPstConfigPersister(storage);
             ServiceLocator.ConfigPersister = configPersister;
 
-            // initialize topic persister with StorageItem 
+            // initialize topic persister with StorageItem
             var topicPersister = new OutlookPstTopicPersister(storage);
             ServiceLocator.TopicPersister = topicPersister;
 
@@ -64,7 +64,7 @@ namespace Eumel.EmailCategorizer
             }
         }
 
-        #endregion
+        #endregion ItemSent EventHandler
 
         #region VSTO generated code
 
@@ -78,9 +78,10 @@ namespace Eumel.EmailCategorizer
             Startup += new EventHandler(ThisAddIn_Startup);
             Shutdown += new EventHandler(ThisAddIn_Shutdown);
         }
+
         // ReSharper restore RedundantDelegateCreation
 
-        #endregion
+        #endregion VSTO generated code
 
         #region ServiceLocator
 
@@ -91,6 +92,6 @@ namespace Eumel.EmailCategorizer
             public static IConfigPersister ConfigPersister { get; internal set; }
         }
 
-        #endregion
+        #endregion ServiceLocator
     }
 }

@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Eumel.EmailCategorizer.Model;
+using Microsoft.Office.Interop.Outlook;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using Eumel.EmailCategorizer.Model;
-using Microsoft.Office.Interop.Outlook;
 
 namespace Eumel.EmailCategorizer.Persister
 {
@@ -33,13 +33,13 @@ namespace Eumel.EmailCategorizer.Persister
                 _storage.Save();
             }
 
-            var topicStrings = ((string) _storage.UserProperties[TopicDataString].Value)
-                .Split(new[] {TopicSeparator}, StringSplitOptions.RemoveEmptyEntries);
+            var topicStrings = ((string)_storage.UserProperties[TopicDataString].Value)
+                .Split(new[] { TopicSeparator }, StringSplitOptions.RemoveEmptyEntries);
 
             var topics = from t in topicStrings
-                let parts = (t + TopicTitleDescriptionSeparator).Split(new[] {TopicTitleDescriptionSeparator},
-                    StringSplitOptions.None)
-                select new Topic {Title = parts[0], Description = parts[1]};
+                         let parts = (t + TopicTitleDescriptionSeparator).Split(new[] { TopicTitleDescriptionSeparator },
+                             StringSplitOptions.None)
+                         select new Topic { Title = parts[0], Description = parts[1] };
 
             return topics;
         }
@@ -50,7 +50,7 @@ namespace Eumel.EmailCategorizer.Persister
         public void SetTopics(IEnumerable<Topic> topics)
         {
             var topicStrings = from t in topics
-                select t.Title + TopicTitleDescriptionSeparator + t.Description;
+                               select t.Title + TopicTitleDescriptionSeparator + t.Description;
 
             var data = string.Join(TopicSeparator, topicStrings);
 
@@ -71,10 +71,10 @@ namespace Eumel.EmailCategorizer.Persister
 
             if (existingTopics.Contains(topic.Title)) return;
 
-            var lst = topics.Concat(new[] {topic});
+            var lst = topics.Concat(new[] { topic });
             SetTopics(lst);
         }
 
-        #endregion
+        #endregion Implementation of ITopicPersister
     }
 }

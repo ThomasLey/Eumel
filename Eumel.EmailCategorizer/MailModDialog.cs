@@ -1,9 +1,8 @@
-﻿using System;
+﻿using Eumel.EmailCategorizer.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using Eumel.EmailCategorizer.Model;
-using Eumel.EmailCategorizer.Persister;
 
 // ReSharper disable InconsistentNaming
 namespace Eumel.EmailCategorizer
@@ -47,12 +46,12 @@ namespace Eumel.EmailCategorizer
         {
             if (cboTopics.SelectedItem == null && !string.IsNullOrWhiteSpace(cboTopics.Text))
             {
-                var tmp = new Topic {Title = cboTopics.Text};
+                var tmp = new Topic { Title = cboTopics.Text };
                 cboTopics.Items.Insert(0, tmp);
                 cboTopics.SelectedItem = tmp;
             }
 
-            _subject.Topic = (Topic) cboTopics.SelectedItem;
+            _subject.Topic = (Topic)cboTopics.SelectedItem;
             _subject.Subject = txtSubject.Text;
 
             DialogResult = DialogResult.OK;

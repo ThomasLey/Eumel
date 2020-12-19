@@ -30,6 +30,6 @@ namespace Eumel.EmailCategorizer.Persister
             // todo implement
         }
 
-        #endregion
+        #endregion Implementation of IConfigPersister
     }
 }

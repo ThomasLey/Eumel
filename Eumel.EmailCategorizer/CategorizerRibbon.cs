@@ -1,5 +1,5 @@
-﻿using System.Diagnostics;
-using Microsoft.Office.Tools.Ribbon;
+﻿using Microsoft.Office.Tools.Ribbon;
+using System.Diagnostics;
 
 namespace Eumel.EmailCategorizer
 {
