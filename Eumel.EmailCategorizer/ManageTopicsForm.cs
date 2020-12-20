@@ -1,7 +1,7 @@
-﻿using Eumel.EmailCategorizer.Model;
-using System;
+﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using Eumel.EmailCategorizer.Model;
 
 namespace Eumel.EmailCategorizer
 {
@@ -31,7 +31,7 @@ namespace Eumel.EmailCategorizer
                 string.Compare(item.Title, textBox1.Text, StringComparison.CurrentCultureIgnoreCase) == 0))
                 return;
 
-            lstTopics.Items.Add(new Topic { Title = textBox1.Text });
+            lstTopics.Items.Add(new Topic {Title = textBox1.Text});
         }
 
         private void btnRemove_Click(object sender, EventArgs e)

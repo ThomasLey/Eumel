@@ -43,7 +43,7 @@
             this.lstTopics.FormattingEnabled = true;
             this.lstTopics.Location = new System.Drawing.Point(12, 67);
             this.lstTopics.Name = "lstTopics";
-            this.lstTopics.Size = new System.Drawing.Size(133, 186);
+            this.lstTopics.Size = new System.Drawing.Size(133, 303);
             this.lstTopics.Sorted = true;
             this.lstTopics.TabIndex = 0;
             // 
@@ -98,7 +98,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(277, 262);
+            this.ClientSize = new System.Drawing.Size(275, 383);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnRemove);

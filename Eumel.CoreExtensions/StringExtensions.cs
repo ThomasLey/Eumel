@@ -5,12 +5,10 @@ namespace Eumel.EmailCategorizer.Extensions
 {
     public static class StringExtensions
     {
-        #region static string wrappers
-
-        [ExcludeFromCodeCoverage]
-        public static bool IsNullOrWhiteSpace(this string source) { return string.IsNullOrWhiteSpace(source); }
-
-        #endregion
+        public static string WithDefault(this string source, string defaultValue)
+        {
+            return source.IsNull() ? defaultValue : source;
+        }
 
         /// <summary>
         ///     get string from source between topicStart and topicEnd
@@ -42,5 +40,21 @@ namespace Eumel.EmailCategorizer.Extensions
             a = b;
             b = tmp;
         }
+
+        #region static string wrappers
+
+        [ExcludeFromCodeCoverage]
+        public static bool IsNullOrWhiteSpace(this string source)
+        {
+            return string.IsNullOrWhiteSpace(source);
+        }
+
+        [ExcludeFromCodeCoverage]
+        public static bool IsNull(this string source)
+        {
+            return source == null;
+        }
+
+        #endregion static string wrappers
     }
 }

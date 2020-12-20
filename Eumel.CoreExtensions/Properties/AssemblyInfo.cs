@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Eumel.Categorizer.Tests")]
+[assembly: AssemblyTitle("Eumel.CoreExtensions")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Eumel.Categorizer.Tests")]
-[assembly: AssemblyCopyright("Copyright ©  2012")]
+[assembly: AssemblyCompany("HP Inc.")]
+[assembly: AssemblyProduct("Eumel.CoreExtensions")]
+[assembly: AssemblyCopyright("Copyright © HP Inc. 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("0cefba0f-e74f-4053-b774-d329abc46eab")]
+[assembly: Guid("80ff468b-fc55-4fde-b9d3-32938c4489a0")]
 
 // Version information for an assembly consists of the following four values:
 //

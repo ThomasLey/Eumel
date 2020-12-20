@@ -1,15 +1,15 @@
-﻿using Eumel.EmailCategorizer.Model;
+﻿using System;
+using System.Windows.Forms;
+using Eumel.EmailCategorizer.Model;
 using Eumel.EmailCategorizer.Persister;
 using Microsoft.Office.Interop.Outlook;
-using System;
-using System.Windows.Forms;
+using Application = Microsoft.Office.Interop.Outlook.Application;
 
-// ReSharper disable InconsistentNaming
 namespace Eumel.EmailCategorizer
 {
-    public partial class ThisAddIn
+    public class ThisAddIn
     {
-        private const string CategorizerDataStore = "Softwarekueche.Categorizer";
+        private const string CategorizerDataStore = "Eumel.EmailCategorizer";
 
         private void ThisAddIn_Shutdown(object sender, EventArgs e)
         {
@@ -20,8 +20,8 @@ namespace Eumel.EmailCategorizer
             var folder = Application.Session.GetDefaultFolder(OlDefaultFolders.olFolderInbox);
             var storage = folder.GetStorage(CategorizerDataStore, OlStorageIdentifierType.olIdentifyBySubject);
 
-            // initialize topic persister with StorageItem
-            var configPersister = new OutlookPstConfigPersister(storage);
+            // initialize config persister with static [ and ] as topic separator
+            var configPersister = new StaticConfigPersister();
             ServiceLocator.ConfigPersister = configPersister;
 
             // initialize topic persister with StorageItem
@@ -35,8 +35,7 @@ namespace Eumel.EmailCategorizer
 
         private void Application_ItemSend(object Item, ref bool Cancel)
         {
-            var mail = Item as MailItem;
-            if (mail == null) return;
+            if (!(Item is MailItem mail)) return;
 
             var cfg = ServiceLocator.ConfigPersister.GetConfig();
             var subject = new EnhancedSubject(mail.Subject, cfg);
@@ -48,11 +47,7 @@ namespace Eumel.EmailCategorizer
             switch (res)
             {
                 case DialogResult.OK:
-                    var newSub = subject.Subject;
-                    if (subject.Topic != null && !string.IsNullOrWhiteSpace(subject.Topic.Title))
-                        newSub = "[" + subject.Topic + "] " + subject.Subject;
-
-                    mail.Subject = newSub;
+                    mail.Subject = subject.ToString();
 
                     // add new topic to store
                     ServiceLocator.TopicPersister.AddTopic(subject.Topic);

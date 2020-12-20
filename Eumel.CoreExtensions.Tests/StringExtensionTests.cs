@@ -26,5 +26,19 @@ namespace Eumel.EmailCategorizer.Tests.Extensions
 
             actual.Should().Be(expected);
         }
+
+        [Test]
+        [TestCase("Foo", "Foo", "Bar")]
+        [TestCase("Foo", "Foo", null)]
+        [TestCase(null, "Bar", "Bar")]
+        [TestCase(@"", @"", "Bar")]
+        [TestCase("   ", "   ", "Bar")]
+        [TestCase(null, null, null)]
+        public void WithDefaultTest(string test, string expected, string defaultValue)
+        {
+            var actual = test.WithDefault(defaultValue);
+
+            actual.Should().Be(expected);
+        }
     }
 }

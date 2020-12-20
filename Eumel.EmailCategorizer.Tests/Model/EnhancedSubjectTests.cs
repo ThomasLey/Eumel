@@ -5,7 +5,7 @@ using NUnit.Framework;
 
 namespace Eumel.EmailCategorizer.Tests.Model
 {
-    [TestFixture()]
+    [TestFixture]
     public class EnhancedSubjectTests
     {
         [Test]

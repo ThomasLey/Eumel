@@ -1,9 +1,9 @@
-﻿using Microsoft.Office.Tools.Ribbon;
 using System.Diagnostics;
+using Microsoft.Office.Tools.Ribbon;
 
 namespace Eumel.EmailCategorizer
 {
-    public partial class CategorizerRibbon
+    public partial class EumelRibbon
     {
         private void CategorizerRibbon_Load(object sender, RibbonUIEventArgs e)
         {
@@ -16,7 +16,7 @@ namespace Eumel.EmailCategorizer
 
         private void btnDonate_Click(object sender, RibbonControlEventArgs e)
         {
-            Process.Start("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DTQGEK6NEXNBE");
+            Process.Start("https://www.paypal.com/donate?hosted_button_id=PHRRBV9C8P5J6");
         }
     }
 }

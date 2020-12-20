@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eumel.EmailCategorizer", "E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eumel.EmailCategorizer.Tests", "Eumel.EmailCategorizer.Tests\Eumel.EmailCategorizer.Tests.csproj", "{3D64DDB9-7EDD-4E83-8E84-D4ACADEB4CF3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eumel.CoreExtensions", "Eumel.CoreExtensions\Eumel.CoreExtensions.csproj", "{80FF468B-FC55-4FDE-B9D3-32938C4489A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eumel.CoreExtensions.Tests", "Eumel.CoreExtensions.Tests\Eumel.CoreExtensions.Tests.csproj", "{51252F7D-6219-49C1-94B0-578C241E71EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{3D64DDB9-7EDD-4E83-8E84-D4ACADEB4CF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D64DDB9-7EDD-4E83-8E84-D4ACADEB4CF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D64DDB9-7EDD-4E83-8E84-D4ACADEB4CF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80FF468B-FC55-4FDE-B9D3-32938C4489A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80FF468B-FC55-4FDE-B9D3-32938C4489A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80FF468B-FC55-4FDE-B9D3-32938C4489A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80FF468B-FC55-4FDE-B9D3-32938C4489A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51252F7D-6219-49C1-94B0-578C241E71EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51252F7D-6219-49C1-94B0-578C241E71EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51252F7D-6219-49C1-94B0-578C241E71EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51252F7D-6219-49C1-94B0-578C241E71EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <!--
     This section defines project-level properties.
 
@@ -158,13 +158,12 @@
     <ManifestKeyFile>Eumel.EmailCategorizer_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>81AD2E5940AA587B5C311EF77212D65C86477842</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>B33CA4972AEF40ED44BA7BF4E9660D72FCD0F26B</ManifestCertificateThumbprint>
   </PropertyGroup>
   <!--
     This section specifies references for the project.
   -->
   <ItemGroup>
-    <Reference Include="Accessibility" />
     <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
@@ -178,17 +177,10 @@
     <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
@@ -218,28 +210,35 @@
     can be found.
   -->
   <ItemGroup>
-    <Compile Include="CategorizerRibbon.cs" />
-    <Compile Include="CategorizerRibbon.Designer.cs">
-      <DependentUpon>CategorizerRibbon.cs</DependentUpon>
+    <Compile Include="EumelRibbon.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="MailModDialog.cs" />
+    <Compile Include="EumelRibbon.Designer.cs">
+      <DependentUpon>EumelRibbon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailModDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MailModDialog.Designer.cs">
       <DependentUpon>MailModDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageTopicsForm.cs" />
+    <Compile Include="ManageTopicsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ManageTopicsForm.Designer.cs">
       <DependentUpon>ManageTopicsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Persister\IConfigPersister.cs" />
     <Compile Include="Persister\ITopicPersister.cs" />
+    <Compile Include="Persister\StaticConfigPersister.cs" />
     <Compile Include="Persister\OutlookPstConfigPersister.cs" />
     <Compile Include="Persister\OutlookPstTopicPersister.cs" />
     <Compile Include="Model\Topic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <EmbeddedResource Include="CategorizerRibbon.resx">
-      <DependentUpon>CategorizerRibbon.cs</DependentUpon>
+    <EmbeddedResource Include="EumelRibbon.resx">
+      <DependentUpon>EumelRibbon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MailModDialog.resx">
       <DependentUpon>MailModDialog.cs</DependentUpon>
@@ -266,8 +265,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="Persister\TopicParserConfiguration.cs" />
+    <Compile Include="Model\TopicParserConfiguration.cs" />
     <Compile Include="Model\EnhancedSubject.cs" />
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
@@ -284,8 +282,12 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="WpfUi\" />
+    <ProjectReference Include="..\Eumel.CoreExtensions\Eumel.CoreExtensions.csproj">
+      <Project>{80ff468b-fc55-4fde-b9d3-32938c4489a0}</Project>
+      <Name>Eumel.CoreExtensions</Name>
+    </ProjectReference>
   </ItemGroup>
   <!-- Include the build rules for a C# project. -->
   <PropertyGroup>

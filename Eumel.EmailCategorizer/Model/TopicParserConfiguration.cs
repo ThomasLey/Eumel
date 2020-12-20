@@ -2,11 +2,7 @@ namespace Eumel.EmailCategorizer.Persister
 {
     public class TopicParserConfiguration
     {
-        public TopicParserConfiguration()
-        {
-        }
-
-        public TopicParserConfiguration(string topicStart, string topicEnd) : this()
+        public TopicParserConfiguration(string topicStart, string topicEnd)
         {
             TopicStart = topicStart;
             TopicEnd = topicEnd;

@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Softwarekueche Email Categorizer")]
+[assembly: AssemblyTitle("Eumel Email Categorizer")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Softwareküche")]
-[assembly: AssemblyProduct("Softwarekueche Categorizer")]
-[assembly: AssemblyCopyright("Copyright © 2012 Softareküche")]
+[assembly: AssemblyCompany("Eumel")]
+[assembly: AssemblyProduct("Eumel Categorizer")]
+[assembly: AssemblyCopyright("Copyright © 2020 Eumel")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
