@@ -1,15 +1,14 @@
-using Microsoft.Office.Interop.Outlook;
+using Eumel.EmailCategorizer.Core.Model;
 
-namespace Eumel.EmailCategorizer.Persister
+namespace Eumel.EmailCategorizer.Core
 {
-    public class OutlookPstConfigPersister : IConfigPersister
+    public class StaticConfigPersister : IConfigPersister
     {
-        private const string ConfigDataString = "Config";
-        private StorageItem _storage;
+        private readonly TopicParserConfiguration _config;
 
-        public OutlookPstConfigPersister(StorageItem storage)
+        public StaticConfigPersister()
         {
-            _storage = storage;
+            _config = new TopicParserConfiguration("[", "]");
         }
 
         #region Implementation of IConfigPersister
@@ -19,7 +18,7 @@ namespace Eumel.EmailCategorizer.Persister
         /// </summary>
         public TopicParserConfiguration GetConfig()
         {
-            return new TopicParserConfiguration("[", "]");
+            return _config;
         }
 
         /// <summary>
@@ -27,7 +26,7 @@ namespace Eumel.EmailCategorizer.Persister
         /// </summary>
         public void SetConfig(TopicParserConfiguration topicParserConfiguration)
         {
-            // todo implement
+            // wont be implemented. config will always be with []
         }
 
         #endregion Implementation of IConfigPersister

@@ -1,9 +1,11 @@
-﻿namespace Eumel.EmailCategorizer.Persister
+﻿using Eumel.EmailCategorizer.Core.Model;
+
+namespace Eumel.EmailCategorizer.Core
 {
     /// <summary>
     ///     interface to manage the topics
     /// </summary>
-    internal interface IConfigPersister
+    public interface IConfigPersister
     {
         /// <summary>
         ///     get a list of topics

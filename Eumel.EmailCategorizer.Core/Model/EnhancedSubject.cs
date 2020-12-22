@@ -1,7 +1,6 @@
-using Eumel.EmailCategorizer.Extensions;
-using Eumel.EmailCategorizer.Persister;
+using Eumel.CoreExtensions;
 
-namespace Eumel.EmailCategorizer.Model
+namespace Eumel.EmailCategorizer.Core.Model
 {
     /// <summary>
     ///     subject with enhanced functionality to separate topic and subject text.

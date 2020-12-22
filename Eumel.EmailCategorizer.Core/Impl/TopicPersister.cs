@@ -1,39 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Eumel.EmailCategorizer.Model;
-using Microsoft.Office.Interop.Outlook;
+using Eumel.EmailCategorizer.Core.Model;
 
-namespace Eumel.EmailCategorizer.Persister
+namespace Eumel.EmailCategorizer.Core.Impl
 {
-    internal class OutlookPstTopicPersister : ITopicPersister
+    public class TopicPersister : ITopicPersister
     {
         private const string TopicDataString = "Topics";
         private const string TopicTitleDescriptionSeparator = "??";
         private const string TopicSeparator = "|";
 
-        private readonly StorageItem _storage;
+        private readonly IEumelStorageItem _storage;
 
-        public OutlookPstTopicPersister(StorageItem storage)
+        public TopicPersister(IEumelStorageItem storage)
         {
             _storage = storage;
         }
-
-        #region Implementation of ITopicPersister
 
         /// <summary>
         ///     get a list of topics
         /// </summary>
         public IEnumerable<Topic> GetTopics()
         {
-            if (_storage.Size == 0)
-            {
-                _storage.UserProperties.Add(TopicDataString, OlUserPropertyType.olText);
-                _storage.UserProperties[TopicDataString].Value = string.Empty;
-                _storage.Save();
-            }
-
-            var topicStrings = ((string) _storage.UserProperties[TopicDataString].Value)
+            var topicStrings = _storage[TopicDataString]
                 .Split(new[] {TopicSeparator}, StringSplitOptions.RemoveEmptyEntries);
 
             var topics = from t in topicStrings
@@ -54,8 +44,7 @@ namespace Eumel.EmailCategorizer.Persister
 
             var data = string.Join(TopicSeparator, topicStrings);
 
-            _storage.UserProperties[TopicDataString].Value = string.Join(TopicSeparator, data);
-            _storage.Save();
+            _storage[TopicDataString] = string.Join(TopicSeparator, data);
         }
 
         /// <summary>
@@ -74,7 +63,5 @@ namespace Eumel.EmailCategorizer.Persister
             var lst = topics.Concat(new[] {topic});
             SetTopics(lst);
         }
-
-        #endregion Implementation of ITopicPersister
     }
 }

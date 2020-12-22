@@ -1,4 +1,4 @@
-namespace Eumel.EmailCategorizer.Persister
+namespace Eumel.EmailCategorizer.Core.Model
 {
     public class TopicParserConfiguration
     {

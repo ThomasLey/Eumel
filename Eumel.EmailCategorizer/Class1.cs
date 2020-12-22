@@ -1,21 +1,23 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Eumel.EmailCategorizer.Model;
 using Eumel.EmailCategorizer.Persister;
-using Microsoft.Office.Interop.Outlook;
-using Application = Microsoft.Office.Interop.Outlook.Application;
+using NetOffice.OutlookApi;
+using NetOffice.OutlookApi.Enums;
+using NetOffice.OutlookApi.Tools;
+using NetOffice.Tools;
 
 namespace Eumel.EmailCategorizer
 {
-    public class ThisAddIn
+    [ComVisible(true)]
+    [ProgId("ExcelAddinSample.Connect")]
+    [Guid("CC85F97A-F409-4497-B2F2-A9581D4A2ED2")]
+    public class EumelAddin : COMAddin
     {
         private const string CategorizerDataStore = "Eumel.EmailCategorizer";
 
-        private void ThisAddIn_Shutdown(object sender, EventArgs e)
-        {
-        }
-
-        private void ThisAddIn_Startup(object sender, EventArgs e)
+        private void ThisAddIn_Startup(ref Array custom)
         {
             var folder = Application.Session.GetDefaultFolder(OlDefaultFolders.olFolderInbox);
             var storage = folder.GetStorage(CategorizerDataStore, OlStorageIdentifierType.olIdentifyBySubject);
@@ -28,7 +30,7 @@ namespace Eumel.EmailCategorizer
             var topicPersister = new OutlookPstTopicPersister(storage);
             ServiceLocator.TopicPersister = topicPersister;
 
-            Application.ItemSend += Application_ItemSend;
+            Application.ItemSendEvent += Application_ItemSend;
         }
 
         #region ItemSent EventHandler
@@ -70,8 +72,7 @@ namespace Eumel.EmailCategorizer
         // ReSharper disable RedundantDelegateCreation
         private void InternalStartup()
         {
-            Startup += new EventHandler(ThisAddIn_Startup);
-            Shutdown += new EventHandler(ThisAddIn_Shutdown);
+            this.OnStartupComplete += new OnStartupCompleteEventHandler(ThisAddIn_Startup);
         }
 
         // ReSharper restore RedundantDelegateCreation

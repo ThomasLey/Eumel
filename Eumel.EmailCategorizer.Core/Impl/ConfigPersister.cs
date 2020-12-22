@@ -1,12 +1,15 @@
-namespace Eumel.EmailCategorizer.Persister
-{
-    public class StaticConfigPersister : IConfigPersister
-    {
-        private readonly TopicParserConfiguration _config;
+using Eumel.EmailCategorizer.Core.Model;
 
-        public StaticConfigPersister()
+namespace Eumel.EmailCategorizer.Core.Impl
+{
+    public class ConfigPersister : IConfigPersister
+    {
+        private const string ConfigDataString = "Config";
+        private IEumelStorageItem _storage;
+
+        public ConfigPersister(IEumelStorageItem storage)
         {
-            _config = new TopicParserConfiguration("[", "]");
+            _storage = storage;
         }
 
         #region Implementation of IConfigPersister
@@ -16,7 +19,7 @@ namespace Eumel.EmailCategorizer.Persister
         /// </summary>
         public TopicParserConfiguration GetConfig()
         {
-            return _config;
+            return new TopicParserConfiguration("[", "]");
         }
 
         /// <summary>
@@ -24,7 +27,7 @@ namespace Eumel.EmailCategorizer.Persister
         /// </summary>
         public void SetConfig(TopicParserConfiguration topicParserConfiguration)
         {
-            // wont be implemented. config will always be with []
+            // todo implement
         }
 
         #endregion Implementation of IConfigPersister

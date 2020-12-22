@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
-using Eumel.EmailCategorizer.Model;
+using Eumel.EmailCategorizer.Core.Model;
 
-namespace Eumel.EmailCategorizer.Persister
+namespace Eumel.EmailCategorizer.Core
 {
     /// <summary>
     ///     interface to manage the topics
     /// </summary>
-    internal interface ITopicPersister
+    public interface ITopicPersister
     {
         /// <summary>
         ///     get a list of topics

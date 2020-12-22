@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 
-namespace Eumel.EmailCategorizer.Extensions
+namespace Eumel.CoreExtensions
 {
     public static class StringExtensions
     {

@@ -1,5 +1,5 @@
 ﻿<hostitem:hostItem hostitem:baseType="Microsoft.Office.Tools.Outlook.OutlookAddInBase"
-                   hostitem:namespace="Softwarekueche.Categorizer" hostitem:className="ThisAddIn"
+                   hostitem:namespace="Eumel.EmailCategorizerNG" hostitem:className="ThisAddIn"
                    hostitem:identifier="ThisAddIn" hostitem:primaryCookie="AddIn" hostitem:master="true"
                    hostitem:factoryType="Microsoft.Office.Tools.Outlook.Factory" hostitem:startupIndex="0"
                    xmlns:hostitem="http://schemas.microsoft.com/2004/VisualStudio/Tools/Applications/HostItem.xsd">
