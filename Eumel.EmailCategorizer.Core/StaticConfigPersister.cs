@@ -4,13 +4,6 @@ namespace Eumel.EmailCategorizer.Core
 {
     public class StaticConfigPersister : IConfigPersister
     {
-        private readonly TopicParserConfiguration _config;
-
-        public StaticConfigPersister()
-        {
-            _config = new TopicParserConfiguration("[", "]");
-        }
-
         #region Implementation of IConfigPersister
 
         /// <summary>
@@ -18,7 +11,7 @@ namespace Eumel.EmailCategorizer.Core
         /// </summary>
         public TopicParserConfiguration GetConfig()
         {
-            return _config;
+            return new TopicParserConfiguration("[", "]");
         }
 
         /// <summary>

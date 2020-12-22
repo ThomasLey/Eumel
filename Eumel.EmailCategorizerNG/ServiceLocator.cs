@@ -1,6 +1,6 @@
 ﻿using Eumel.EmailCategorizer.Core;
 
-namespace Eumel.EmailCategorizerNG.Wrapper
+namespace Eumel.EmailCategorizerNG
 {
     internal static class ServiceLocator
     {

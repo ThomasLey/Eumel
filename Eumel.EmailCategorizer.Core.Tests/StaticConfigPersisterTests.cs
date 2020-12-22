@@ -39,5 +39,22 @@ namespace Eumel.EmailCategorizer.Core.Tests
             cfg.TopicStart.Should().Be("[");
             cfg.TopicEnd.Should().Be("]");
         }
+
+        [Test]
+        public void AlwaysReturnNewInstance()
+        {
+            var sut = new StaticConfigPersister();
+
+            var cfg = sut.GetConfig();
+            cfg.TopicStart.Should().Be("[");
+            cfg.TopicEnd.Should().Be("]");
+
+            cfg.TopicStart = "(";
+            cfg.TopicEnd = ")";
+
+            cfg = sut.GetConfig();
+            cfg.TopicStart.Should().Be("[");
+            cfg.TopicEnd.Should().Be("]");
+        }
     }
 }

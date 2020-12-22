@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using Eumel.EmailCategorizer.Core;
 using Eumel.EmailCategorizer.Core.Impl;
 using Eumel.EmailCategorizer.Core.Model;
@@ -39,7 +40,7 @@ namespace Eumel.EmailCategorizerNG
 
             var ctrl = new EumelMailSendControl
             {
-                Topics = usedTopics,
+                Topics = new ObservableCollection<Topic>(usedTopics),
                 Subject = subject
             };
 

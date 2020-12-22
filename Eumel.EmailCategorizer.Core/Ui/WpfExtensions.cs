@@ -9,8 +9,10 @@ namespace Eumel.EmailCategorizer.Core.Ui
         {
             var window = new Window
             {
-                Title = "My User Control Dialog",
-                Content = control
+                Title = title,
+                Content = control,
+                Width = control.Width,
+                Height = control.Height
             };
 
             return window.ShowDialog();

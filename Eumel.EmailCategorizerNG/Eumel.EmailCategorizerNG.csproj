@@ -195,7 +195,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Wrapper\StorageWrapper.cs" />
-    <Compile Include="Wrapper\ServiceLocator.cs" />
+    <Compile Include="ServiceLocator.cs" />
     <EmbeddedResource Include="EumelRibbon.resx">
       <DependentUpon>EumelRibbon.cs</DependentUpon>
     </EmbeddedResource>
