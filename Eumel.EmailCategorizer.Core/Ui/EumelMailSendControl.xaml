@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d"
+             xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Margin="4">
         <Grid.RowDefinitions>
@@ -15,14 +16,16 @@
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
                 <TextBlock Name="NewTopic" />
-                <Button>+</Button>
+                <Button Content="{fa:ToText PlusSquare}" Name="AddButton" x:FieldModifier="public"></Button>
             </StackPanel>
-            <ListBox x:Name="MyListBoxName" ItemsSource="{Binding Path=Topics}" Height="Auto" Padding="0 4 0 4">
+            <ListBox x:Name="TopicList" ItemsSource="{Binding Path=Topics}" Height="Auto" Padding="0 4 0 4"
+                     x:FieldModifier="public">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding Title}" ToolTip="{Binding Path=Description}" />
-                            <Button Content="[x]" 
+                            <Button Content="{fa:Icon MinusSquare}"
+                                    Name="RemoveButton"
                                     Command="{Binding ElementName=MyListBoxName, Path=DataContext.DeleteItemCommand}" 
                                     CommandParameter="{Binding }" />
                         </StackPanel>

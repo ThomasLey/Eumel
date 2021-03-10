@@ -4,8 +4,6 @@ namespace Eumel.EmailCategorizer.Core
 {
     public class StaticConfigPersister : IConfigPersister
     {
-        #region Implementation of IConfigPersister
-
         /// <summary>
         ///     get a list of topics
         /// </summary>
@@ -21,7 +19,5 @@ namespace Eumel.EmailCategorizer.Core
         {
             // wont be implemented. config will always be with []
         }
-
-        #endregion Implementation of IConfigPersister
     }
 }
