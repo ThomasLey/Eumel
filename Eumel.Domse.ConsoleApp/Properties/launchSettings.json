@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "Eumel.Domse.ConsoleApp": {
-      "commandName": "Project",
-      "commandLineArgs": "Add \"C:\\Workspaces\\sample_pics\\2020-09-06_Aussicht_Herchen\""
-    }
-  }
-}
