@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <!-- Required elements-->
+    <id>Eumel.Domse.PowerShell</id>
+    <version>0.0.1</version>
+    <description>EUMEL Suite (R) Document Management PowerShell Extensions</description>
+    <authors>Thomas Ley </authors>
+
+    <!-- Optional elements -->
+    <!-- ... -->
+  </metadata>
+  <!-- Optional 'files' node -->
+</package>
