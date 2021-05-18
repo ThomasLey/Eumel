@@ -6,7 +6,7 @@ namespace Eumel.Domse.PowerShell
 {
     [Cmdlet(VerbsCommon.Get, "DomseDocument")]
     [OutputType(typeof(DocumentInformation))]
-    public class AddDomseDocumentCmdlet : Cmdlet
+    public class GetDomseDocumentCmdlet : Cmdlet
     {
         private FolderStorage _storage;
 

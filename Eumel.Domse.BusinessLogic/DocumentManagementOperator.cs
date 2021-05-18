@@ -5,18 +5,26 @@ using Eumel.Domse.Core;
 
 namespace Eumel.Domse.BusinessLogic
 {
-    public class DocumentManagementOperator : IDocumentManagementOperator
+    public class DocumentOperator : IDocumentOperator
     {
         private readonly Lazy<IDocumentStorage> _storage;
 
-        public DocumentManagementOperator(Lazy<IDocumentStorage> storage)
+        public DocumentOperator(Lazy<IDocumentStorage> storage)
         {
             _storage = storage;
         }
 
-        public IEnumerable<DocumentInformation> GetDocumentList => GetAllDocuments(x => true);
+        public IEnumerable<DocumentInformation> GetDocumentList()
+        {
+            return GetAllDocumentsWhere(_ => true);
+        }
 
-        private IEnumerable<DocumentInformation> GetAllDocuments(Func<DocumentInformation, bool> search)
+        public DocumentInformation GetDocument(Guid id)
+        {
+            return GetAllDocumentsWhere(x => x.Id == id).Single();
+        }
+
+        private IEnumerable<DocumentInformation> GetAllDocumentsWhere(Func<DocumentInformation, bool> search)
         {
             return _storage.Value.DocumentList.Where(search).ToArray();
         }
