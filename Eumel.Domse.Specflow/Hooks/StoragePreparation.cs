@@ -20,12 +20,12 @@ namespace Eumel.Domse.Specflow.Hooks
         }
 
         [BeforeFeature(Order = 0)]
-        public void EmptyStorageFolder()
+        public static void EmptyStorageFolder()
         {
         }
         
         [BeforeFeature(Order = 100)]
-        public void AddSampleDocuments()
+        public static void AddSampleDocuments()
         {
         }
     }

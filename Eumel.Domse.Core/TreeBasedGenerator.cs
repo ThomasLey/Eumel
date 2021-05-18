@@ -21,13 +21,4 @@
             return doc.Metadata[_property].Replace(_hierarchySeparator, "\\");
         }
     }
-
-    public class FolderStorage
-    {
-        public FolderStorage()
-        {
-            
-        }
-    }
-
 }

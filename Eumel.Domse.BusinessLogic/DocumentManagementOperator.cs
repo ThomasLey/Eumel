@@ -21,14 +21,4 @@ namespace Eumel.Domse.BusinessLogic
             return _storage.Value.DocumentList.Where(search).ToArray();
         }
     }
-
-    public interface IDocumentStorage
-    {
-        IEnumerable<DocumentInformation> DocumentList { get; }
-    }
-
-    public interface IDocumentManagementOperator
-    {
-        IEnumerable<DocumentInformation> GetDocumentList { get; }
-    }
 }
