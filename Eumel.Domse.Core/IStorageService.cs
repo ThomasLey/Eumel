@@ -2,7 +2,7 @@
 
 namespace Eumel.Domse.Core
 {
-    public interface IDocumentStorage
+    public interface IStorageService
     {
         IEnumerable<DocumentInformation> DocumentList { get; }
     }

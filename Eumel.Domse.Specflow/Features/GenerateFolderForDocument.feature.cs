@@ -112,13 +112,13 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("a guid folder creator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 12
- testRunner.And("a document id of \"4f149cc3-fa34-4eac-b7f6-e3b8dfa4314b\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("a document id of \'4f149cc3-fa34-4eac-b7f6-e3b8dfa4314b\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 13
  testRunner.When("the folder name is generated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 14
- testRunner.Then("the result should be \"4f149cc3\\fa34\\4eac\\b7f6\\e3b8dfa4314b\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the result should be \'4f149cc3\\fa34\\4eac\\b7f6\\e3b8dfa4314b\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -156,16 +156,16 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("a tree-based folder creator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 19
- testRunner.And("a metadata \"filemap\" with value \"mail->invoice\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("a metadata \'filemap\' with value \'mail->invoice\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 20
- testRunner.And("with configuration {\"Property\":\"filemap\",\"Separator\":\"->\"}", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("with configuration {\'Property\':\'filemap\',\'Separator\':\'->\'}", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 21
  testRunner.When("the folder name is generated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 22
- testRunner.Then("the result should be \"mail\\invoice\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the result should be \'mail\\invoice\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

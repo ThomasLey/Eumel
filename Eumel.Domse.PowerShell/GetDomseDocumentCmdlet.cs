@@ -8,7 +8,7 @@ namespace Eumel.Domse.PowerShell
     [OutputType(typeof(DocumentInformation))]
     public class GetDomseDocumentCmdlet : Cmdlet
     {
-        private FolderStorage _storage;
+        private IStorageService _storage;
 
         [Parameter(
             HelpMessage = "File which should be added to the storage",
@@ -29,7 +29,7 @@ namespace Eumel.Domse.PowerShell
         {
             base.BeginProcessing();
 
-            _storage = new FolderStorage();
+            _storage = new FolderStorageService(Configuration);
         }
 
         protected override void ProcessRecord()

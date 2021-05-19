@@ -7,5 +7,6 @@ namespace Eumel.Domse.Core
     {
         public Guid Id { get; set; }
         public Dictionary<string, string> Metadata { get; } = new Dictionary<string, string>();
+        public string Name { get; set; }
     }
 }

@@ -23,7 +23,7 @@ namespace Eumel.Domse.Specflow.Steps
             _driver.Generator = new GuidLocationGenerator();
         }
 
-        [Given(@"a document id of ""(.*)""")]
+        [Given(@"a document id of '(.*)'")]
         public void GivenADocumentIdOf(Guid id)
         {
             _driver.Id = id;
@@ -35,7 +35,7 @@ namespace Eumel.Domse.Specflow.Steps
             _driver.Generator = new TreeBasedGenerator(null, null);
         }
 
-        [Given(@"a metadata ""(.*)"" with value ""(.*)""")]
+        [Given(@"a metadata '(.*)' with value '(.*)'")]
         public void GivenAMetadataWithValue(string key, string value)
         {
             _driver.Property[key] = value;
@@ -55,7 +55,7 @@ namespace Eumel.Domse.Specflow.Steps
             _driver.GenerateFolder();
         }
 
-        [Then(@"the result should be ""(.*)""")]
+        [Then(@"the result should be '(.*)'")]
         public void ThenTheResultShouldBeMailInvoice(string expected)
         {
             _driver.GeneratedFolder.Should().Be(expected);

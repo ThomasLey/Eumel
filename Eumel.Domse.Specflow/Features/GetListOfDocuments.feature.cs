@@ -19,28 +19,26 @@ namespace Eumel.Domse.Specflow.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.8.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("PowerShell Commands for Document Management", Description="\tIn order to manage the storage with powershell\r\n\tAs a user\r\n\tI want to use power" +
-        "shell commands to create, read, update, delete documents\r\n    ------------------" +
-        "--\r\n    Define the powershell commands which are used to manage documents in fol" +
-        "der/storage.", SourceFile="Features\\PowershellDocumentManagement.feature", SourceLine=0)]
-    public partial class PowerShellCommandsForDocumentManagementFeature
+    [TechTalk.SpecRun.FeatureAttribute("Get a list of documents", Description="\tIn order to list available documents\r\n\tAs a user\r\n\tI want the system return a li" +
+        "st of documents\r\n    --------------------\r\n\tThe system should be able to return " +
+        "a list of files. The files\r\n\tcan be filtered using prototype filtering.", SourceFile="Features\\GetListOfDocuments.feature", SourceLine=0)]
+    public partial class GetAListOfDocumentsFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "PowershellDocumentManagement.feature"
+#line 1 "GetListOfDocuments.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "PowerShell Commands for Document Management", "\tIn order to manage the storage with powershell\r\n\tAs a user\r\n\tI want to use power" +
-                    "shell commands to create, read, update, delete documents\r\n    ------------------" +
-                    "--\r\n    Define the powershell commands which are used to manage documents in fol" +
-                    "der/storage.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Get a list of documents", "\tIn order to list available documents\r\n\tAs a user\r\n\tI want the system return a li" +
+                    "st of documents\r\n    --------------------\r\n\tThe system should be able to return " +
+                    "a list of files. The files\r\n\tcan be filtered using prototype filtering.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -76,15 +74,15 @@ namespace Eumel.Domse.Specflow.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Add document to storage", new string[] {
-                "storageManagement"}, SourceLine=8)]
-        public virtual void AddDocumentToStorage()
+        [TechTalk.SpecRun.ScenarioAttribute("Get a list of all document from business layer", new string[] {
+                "folderStorage"}, SourceLine=9)]
+        public virtual void GetAListOfAllDocumentFromBusinessLayer()
         {
             string[] tagsOfScenario = new string[] {
-                    "storageManagement"};
+                    "folderStorage"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add document to storage", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 9
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get a list of all document from business layer", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 10
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -104,20 +102,17 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 10
- testRunner.Given("a powershell parameter \'File\':\'Resources\\Note.txt\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
 #line 11
- testRunner.And("a powershell parameter \'Configuration\':\'file://./.eumelStoreTemp\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("a storage location \'.\\.SampleStore\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 12
- testRunner.When("execute Add-DomseDocument", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("a file folder storage service is used", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 13
- testRunner.Then("the result should return a DocumentInformation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("a list of documents is requested", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 14
- testRunner.And("the DocumentInformation should contain the document name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("the list should contain \'2\' documents", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

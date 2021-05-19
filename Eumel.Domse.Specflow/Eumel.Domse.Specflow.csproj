@@ -17,13 +17,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Eumel.Domse.BusinessLogic\Eumel.Domse.BusinessLogic.csproj" />
     <ProjectReference Include="..\Eumel.Domse.Core\Eumel.Domse.Core.csproj" />
+    <ProjectReference Include="..\Eumel.Domse.PowerShell\Eumel.Domse.PowerShell.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Resources\Note.txt">
+    <Content Include=".SampleStore\Note.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Content>
+    <Content Include=".SampleStore\readme.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

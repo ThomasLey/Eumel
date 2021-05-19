@@ -7,9 +7,9 @@ namespace Eumel.Domse.BusinessLogic
 {
     public class DocumentOperator : IDocumentOperator
     {
-        private readonly Lazy<IDocumentStorage> _storage;
+        private readonly Lazy<IStorageService> _storage;
 
-        public DocumentOperator(Lazy<IDocumentStorage> storage)
+        public DocumentOperator(Lazy<IStorageService> storage)
         {
             _storage = storage;
         }
