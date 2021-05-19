@@ -23,7 +23,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include=".SampleStore\Note.txt.eumel.metadata.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include=".SampleStore\Note.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include=".SampleStore\readme.md.eumel.metadata.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include=".SampleStore\readme.md">

@@ -6,7 +6,7 @@ namespace Eumel.Domse.Core
     public class DocumentInformation
     {
         public Guid Id { get; set; }
-        public Dictionary<string, string> Metadata { get; } = new Dictionary<string, string>();
+        public Dictionary<string, string> Metadata { get; set; } = new Dictionary<string, string>();
         public string Name { get; set; }
     }
 }

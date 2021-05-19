@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace Eumel.Domse.Core
 {
+    [Obsolete]
     public class DocumentMetadata
     {
         public DocumentMetadata(Guid id)

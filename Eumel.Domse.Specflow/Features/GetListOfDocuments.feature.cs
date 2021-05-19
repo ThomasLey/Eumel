@@ -114,8 +114,163 @@ this.ScenarioInitialize(scenarioInfo);
 #line 14
  testRunner.Then("the list should contain \'2\' documents", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
+#line 15
+ testRunner.And("the list should contain \'Note.txt\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 16
+ testRunner.And("the list should not contain \'Note.txt.eumel.metadata.json\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 17
+ testRunner.And("the list should contain \'readme.md\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 18
+ testRunner.And("the list should not contain \'readme.md.eumel.metadata.json\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
             }
             this.ScenarioCleanup();
+        }
+        
+        public virtual void GetAListOfAllDocumentFromBusinessLayerWithParameter(string filename, string id, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "folderStorage"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("filename", filename);
+            argumentsOfScenario.Add("id", id);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get a list of all document from business layer with parameter", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 21
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 22
+ testRunner.Given("a storage location \'.\\.SampleStore\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 23
+ testRunner.And("a file folder storage service is used", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 24
+ testRunner.When("a list of documents is requested", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 25
+ testRunner.Then("the list should contain \'2\' documents", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 26
+ testRunner.And(string.Format("the list should contain \'{0}\'", filename), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 27
+ testRunner.And(string.Format("the list should not contain \'{0}.eumel.metadata.json\'", filename), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 28
+ testRunner.And(string.Format("the list id for \'{0}\' should be \'{1}\'", filename, id), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Get a list of all document from business layer with parameter, Note.txt", new string[] {
+                "folderStorage"}, SourceLine=30)]
+        public virtual void GetAListOfAllDocumentFromBusinessLayerWithParameter_Note_Txt()
+        {
+#line 21
+this.GetAListOfAllDocumentFromBusinessLayerWithParameter("Note.txt", "61951527-3d5f-4443-bd12-786fbf6c35b2", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Get a list of all document from business layer with parameter, readme.md", new string[] {
+                "folderStorage"}, SourceLine=30)]
+        public virtual void GetAListOfAllDocumentFromBusinessLayerWithParameter_Readme_Md()
+        {
+#line 21
+this.GetAListOfAllDocumentFromBusinessLayerWithParameter("readme.md", "2f68ebc0-220f-43ee-99ac-50a1f6b3d71b", ((string[])(null)));
+#line hidden
+        }
+        
+        public virtual void GetADocumentFromBusinessLayerWithId(string filename, string id, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "folderStorage"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("filename", filename);
+            argumentsOfScenario.Add("id", id);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get a document from business layer with id", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 35
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 36
+ testRunner.Given("a storage location \'.\\.SampleStore\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 37
+ testRunner.And("a file folder storage service is used", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 38
+ testRunner.When(string.Format("a documents with id \'{0}\' is requested", id), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 39
+ testRunner.Then(string.Format("the name should be \'{0}\'", filename), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Get a document from business layer with id, Note.txt", new string[] {
+                "folderStorage"}, SourceLine=41)]
+        public virtual void GetADocumentFromBusinessLayerWithId_Note_Txt()
+        {
+#line 35
+this.GetADocumentFromBusinessLayerWithId("Note.txt", "61951527-3d5f-4443-bd12-786fbf6c35b2", ((string[])(null)));
+#line hidden
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Get a document from business layer with id, readme.md", new string[] {
+                "folderStorage"}, SourceLine=41)]
+        public virtual void GetADocumentFromBusinessLayerWithId_Readme_Md()
+        {
+#line 35
+this.GetADocumentFromBusinessLayerWithId("readme.md", "2f68ebc0-220f-43ee-99ac-50a1f6b3d71b", ((string[])(null)));
+#line hidden
         }
     }
 }

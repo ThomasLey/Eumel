@@ -5,11 +5,11 @@ using Eumel.Domse.Core;
 
 namespace Eumel.Domse.BusinessLogic
 {
-    public class DocumentOperator : IDocumentOperator
+    public class DefaultDocumentOperator : IDocumentOperator
     {
         private readonly Lazy<IStorageService> _storage;
 
-        public DocumentOperator(Lazy<IStorageService> storage)
+        public DefaultDocumentOperator(Lazy<IStorageService> storage)
         {
             _storage = storage;
         }

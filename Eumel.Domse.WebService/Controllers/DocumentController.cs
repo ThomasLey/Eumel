@@ -14,7 +14,7 @@ namespace Eumel.Domse.WebService.Controllers
     {
         public DocumentController()
         {
-            Operator = new DocumentOperator(null);
+            Operator = new DefaultDocumentOperator(null);
         }
         // GET: api/<DocumentController>
         [HttpGet]

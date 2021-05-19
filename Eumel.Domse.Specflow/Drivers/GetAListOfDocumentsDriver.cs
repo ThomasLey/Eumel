@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection.Metadata;
 using Eumel.Domse.BusinessLogic;
 using Eumel.Domse.Core;
 
@@ -10,11 +11,18 @@ namespace Eumel.Domse.Specflow.Drivers
         public string StoragePath { get; set; }
         public IStorageService StorageService { get; set; }
         public IEnumerable<DocumentInformation> Documents { get; set; }
+        public DocumentInformation Document { get; set; }
 
         public IEnumerable<DocumentInformation> GetDocuments()
         {
-            var ops = new DocumentOperator(new Lazy<IStorageService>(StorageService));
+            var ops = new DefaultDocumentOperator(new Lazy<IStorageService>(StorageService));
             return ops.GetDocumentList();
+        }
+
+        public DocumentInformation GetDocumentWithId(Guid id)
+        {
+            var ops = new DefaultDocumentOperator(new Lazy<IStorageService>(StorageService));
+            return ops.GetDocument(id);
         }
     }
 }
