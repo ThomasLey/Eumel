@@ -11,7 +11,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eumel.Domse.PowerShell", "E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eumel.Domse.BusinessLogic", "Eumel.Domse.BusinessLogic\Eumel.Domse.BusinessLogic.csproj", "{405B1A27-C612-40D2-B189-5DF6A60529A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eumel.Domse.WebService", "Eumel.Domse.WebService\Eumel.Domse.WebService.csproj", "{E4B0E567-85FD-4963-8489-08BEC96CD53B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eumel.Domse.WebService", "Eumel.Domse.WebService\Eumel.Domse.WebService.csproj", "{E4B0E567-85FD-4963-8489-08BEC96CD53B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eumel.Domse.WebService.Tests", "Eumel.Domse.WebService.Tests\Eumel.Domse.WebService.Tests.csproj", "{47C36839-7A44-4A64-9B42-24CB04F228B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eumel.Domse.BusinessLogic.Tests", "Eumel.Domse.BusinessLogic.Tests\Eumel.Domse.BusinessLogic.Tests.csproj", "{73DEC1BF-E2CA-4744-9EE6-17C5493FCF83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eumel.Domse.Core.Tests", "Eumel.Domse.Core.Tests\Eumel.Domse.Core.Tests.csproj", "{6D7B6753-5931-4573-9D23-4733BE9E8314}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eumel.Domse.PowerShell.Tests", "Eumel.Domse.PowerShell.Tests\Eumel.Domse.PowerShell.Tests.csproj", "{6C40C142-3024-44B6-A1A9-BF750AB5662F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +47,22 @@ Global
 		{E4B0E567-85FD-4963-8489-08BEC96CD53B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4B0E567-85FD-4963-8489-08BEC96CD53B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4B0E567-85FD-4963-8489-08BEC96CD53B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47C36839-7A44-4A64-9B42-24CB04F228B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47C36839-7A44-4A64-9B42-24CB04F228B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47C36839-7A44-4A64-9B42-24CB04F228B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47C36839-7A44-4A64-9B42-24CB04F228B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73DEC1BF-E2CA-4744-9EE6-17C5493FCF83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73DEC1BF-E2CA-4744-9EE6-17C5493FCF83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73DEC1BF-E2CA-4744-9EE6-17C5493FCF83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73DEC1BF-E2CA-4744-9EE6-17C5493FCF83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D7B6753-5931-4573-9D23-4733BE9E8314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D7B6753-5931-4573-9D23-4733BE9E8314}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D7B6753-5931-4573-9D23-4733BE9E8314}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D7B6753-5931-4573-9D23-4733BE9E8314}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C40C142-3024-44B6-A1A9-BF750AB5662F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C40C142-3024-44B6-A1A9-BF750AB5662F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C40C142-3024-44B6-A1A9-BF750AB5662F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C40C142-3024-44B6-A1A9-BF750AB5662F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
