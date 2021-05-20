@@ -30,7 +30,7 @@ namespace Eumel.Domse.Core
                     {
                         Name = x.Name,
                         Metadata = GetDictionaryFor(x.FullName + MetadataExtension),
-                        Id = Guid.Parse(GetDictionaryFor(x.FullName + MetadataExtension)["id"])
+                        Id = Guid.Parse(GetDictionaryFor(x.FullName + MetadataExtension)["_id"])
                     });
                 return infos;
             }
