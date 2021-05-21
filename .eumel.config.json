@@ -1,4 +1,4 @@
 ﻿{
-  "storage": ".eumelStore",
-  "folderFactory":  "GuidLocationGenerator"
+  "storageType": "FolderStorageService",
+  "storageEndpoint": "{local}"
 }

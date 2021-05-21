@@ -182,7 +182,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And(string.Format("the list should not contain \'{0}.eumel.metadata.json\'", filename), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 28
- testRunner.And(string.Format("the list id for \'{0}\' should be \'{1}\'", filename, id), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("the document id for \'{0}\' should be \'{1}\'", filename, id), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

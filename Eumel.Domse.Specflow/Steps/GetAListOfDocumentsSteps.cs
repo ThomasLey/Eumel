@@ -62,7 +62,7 @@ namespace Eumel.Domse.Specflow.Steps
             _driver.Documents.Should().NotContain(x => x.Name == filename);
         }
 
-        [Then(@"the list id for '(.*)' should be '(.*)'")]
+        [Then(@"the document id for '(.*)' should be '(.*)'")]
         public void ThenTheListIdForShouldBe(string filename, string id)
         {
             _driver.Documents.Should().Contain(x => x.Name == filename && x.Id == Guid.Parse(id));

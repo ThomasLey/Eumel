@@ -25,7 +25,7 @@ Scenario: Get a list of all document from business layer with parameter
 	Then the list should contain '2' documents
 	And the list should contain '<filename>'
 	And the list should not contain '<filename>.eumel.metadata.json'
-	And the list id for '<filename>' should be '<id>'
+	And the document id for '<filename>' should be '<id>'
 Examples:
 | filename  | id                                   |
 | Note.txt  | 61951527-3d5f-4443-bd12-786fbf6c35b2 |
@@ -33,7 +33,7 @@ Examples:
 
 @folderStorage
 Scenario: Get a document from business layer with id
-	Given a storage location '.\.SampleStore'
+	Given a storage location '.\.SampleStore' 
 	And a file folder storage service is used
 	When a documents with id '<id>' is requested
 	Then the name should be '<filename>'

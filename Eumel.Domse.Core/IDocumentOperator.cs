@@ -8,8 +8,4 @@ namespace Eumel.Domse.Core
         IEnumerable<DocumentInformation> GetDocumentList();
         DocumentInformation GetDocument(Guid id);
     }
-
-    public interface IOperator
-    {
-    }
 }

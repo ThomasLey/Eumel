@@ -6,7 +6,7 @@ using System.Reflection;
 
 namespace Eumel.Domse.Specflow.Drivers
 {
-    internal class PowershellCmdletDriver
+    internal class PowershellDocumentManagementDriver
     {
         private readonly Dictionary<string, string> _parameter = new();
         public Cmdlet Cmdlet { get; set; }

@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include=".Resources\DocumentErdbeere.txt" />
     <Content Include=".SampleStore\Note.txt.eumel.metadata.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
