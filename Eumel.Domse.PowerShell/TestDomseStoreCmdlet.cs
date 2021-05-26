@@ -4,10 +4,10 @@ using Eumel.Domse.Core;
 
 namespace Eumel.Domse.PowerShell
 {
-    [Cmdlet("Check", "DomseStore")]
+    [Cmdlet("Test", "DomseStore")]
     [OutputType(typeof(DocumentInformation))]
     // ReSharper disable once UnusedMember.Global
-    public class CheckDomseStoreCmdlet : Cmdlet
+    public class TestDomseStoreCmdlet : Cmdlet
     {
         private EumelConfiguration _config;
 
@@ -23,8 +23,8 @@ namespace Eumel.Domse.PowerShell
 
             if (!System.IO.File.Exists(Configuration))
             {
-                WriteError(new ErrorRecord(new FileNotFoundException("cannot fin configuration file", Configuration), "1000", ErrorCategory.ObjectNotFound, null));
-                throw new FileNotFoundException("cannot fin configuration file", Configuration);
+                WriteError(new ErrorRecord(new FileNotFoundException("cannot find configuration file", Configuration), "1000", ErrorCategory.ObjectNotFound, null));
+                throw new FileNotFoundException("cannot find configuration file", Configuration);
             }
 
             _config = EumelConfiguration.Load(Configuration);

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Eumel.Domse.PowerShell</id>
+    <title>Eumel Domse PowerShell Module</title>
+    <version>$version$</version>
+    <description>PowerShell module for domse document management</description>
+    <authors>ThomasLey</authors>
+    <tags>PSModule</tags>
+
+  </metadata>
+
+  <files>
+    <file src="Eumel.Domse.PowerShell.psd1" />
+    <file src="bin\$configuration$\net5.0\Eumel.Domse.BusinessLogic.dll" target="lib\net5.0" />
+    <file src="bin\$configuration$\net5.0\Eumel.Domse.Core.dll" target="lib\net5.0" />
+  </files>
+</package>
