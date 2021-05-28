@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using Microsoft.VisualBasic;
+using Eumel.Domse.Core.Contracts;
+using Eumel.Domse.Core.Model;
 using Newtonsoft.Json;
 
-namespace Eumel.Domse.Core
+namespace Eumel.Domse.Core.Services
 {
     public class FolderStorageService : IStorageService
     {

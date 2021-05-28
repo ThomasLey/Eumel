@@ -1,4 +1,4 @@
-﻿namespace Eumel.Domse.Core
+﻿namespace Eumel.Domse.Core.Contracts
 {
     public interface IOperator
     {

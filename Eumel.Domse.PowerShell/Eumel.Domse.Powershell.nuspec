@@ -6,13 +6,10 @@
     <version>$version$</version>
     <description>PowerShell module for domse document management</description>
     <authors>ThomasLey</authors>
-    <tags>PSModule</tags>
-
+    <tags>PSModule Domse PowerShell DocumentManagement</tags>
   </metadata>
 
   <files>
     <file src="Eumel.Domse.PowerShell.psd1" />
-    <file src="bin\$configuration$\net5.0\Eumel.Domse.BusinessLogic.dll" target="lib\net5.0" />
-    <file src="bin\$configuration$\net5.0\Eumel.Domse.Core.dll" target="lib\net5.0" />
   </files>
 </package>

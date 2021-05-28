@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using Eumel.Domse.BusinessLogic;
 using Eumel.Domse.Core;
+using Eumel.Domse.Core.Contracts;
+using Eumel.Domse.Core.Model;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 

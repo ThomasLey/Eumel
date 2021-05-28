@@ -1,8 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
-using Eumel.Domse.BusinessLogic;
 using Eumel.Domse.Core;
+using Eumel.Domse.Core.Services;
 using Eumel.Domse.Specflow.Drivers;
 using FluentAssertions;
 using TechTalk.SpecFlow;

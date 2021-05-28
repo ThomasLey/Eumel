@@ -13,6 +13,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.13" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
+    <PackageReference Include="system.io.abstractions" Version="13.2.33" />
   </ItemGroup>
 
   <ItemGroup>

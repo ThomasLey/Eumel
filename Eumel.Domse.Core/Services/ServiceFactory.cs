@@ -1,4 +1,7 @@
-﻿namespace Eumel.Domse.Core
+﻿using Eumel.Domse.Core.Contracts;
+using Eumel.Domse.Core.Model;
+
+namespace Eumel.Domse.Core.Services
 {
     public class ServiceFactory : IServiceFactory
     {

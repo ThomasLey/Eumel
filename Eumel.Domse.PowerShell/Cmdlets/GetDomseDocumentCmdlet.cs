@@ -2,15 +2,17 @@
 using System.IO;
 using System.Linq;
 using System.Management.Automation;
-using System.Reflection;
 using Eumel.Domse.BusinessLogic;
 using Eumel.Domse.Core;
+using Eumel.Domse.Core.Contracts;
+using Eumel.Domse.Core.Model;
+using Eumel.Domse.Core.Services;
 
-namespace Eumel.Domse.PowerShell
+namespace Eumel.Domse.PowerShell.Cmdlets
 {
     [Cmdlet(VerbsCommon.Get, "DomseDocument")]
     [OutputType(typeof(DocumentInformation))]
-    public class GetDomseDocumentCmdlet : Cmdlet
+    public class GetDomseDocumentCmdlet : DomseCmdletBase
     {
         private IDocumentOperator _documentOperator;
 

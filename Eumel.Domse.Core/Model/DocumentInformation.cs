@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Eumel.Domse.Core
+namespace Eumel.Domse.Core.Model
 {
     public class DocumentInformation
     {

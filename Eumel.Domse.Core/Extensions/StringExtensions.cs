@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Eumel.Domse.Core
+﻿namespace Eumel.Domse.Core.Extensions
 {
     public static class StringExtensions
     {
