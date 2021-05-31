@@ -8,6 +8,7 @@ Lets find the Eumel PowerShell module
 Install amd import eumel domse module
 
     Install-Module Eumel.Domse.PowerShell
+    Import-Module Eumel.Domse.PowerShell
     Import-Module Eumel.Domse.PowerShell -DisableNameChecking
 
 
