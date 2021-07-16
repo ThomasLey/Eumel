@@ -1,5 +1,4 @@
-﻿using Eumel.Domse.Core;
-using Eumel.Domse.Core.Contracts;
+﻿using Eumel.Domse.Core.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Eumel.Domse.WebService.Controllers

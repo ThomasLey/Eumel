@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using Eumel.Domse.BusinessLogic;
-using Eumel.Domse.Core;
 using Eumel.Domse.Core.Contracts;
 using Eumel.Domse.Core.Model;
 

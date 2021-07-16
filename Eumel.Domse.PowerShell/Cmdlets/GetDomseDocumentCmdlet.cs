@@ -3,7 +3,6 @@ using System.IO;
 using System.Linq;
 using System.Management.Automation;
 using Eumel.Domse.BusinessLogic;
-using Eumel.Domse.Core;
 using Eumel.Domse.Core.Contracts;
 using Eumel.Domse.Core.Model;
 using Eumel.Domse.Core.Services;

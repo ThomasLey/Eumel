@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
-using Eumel.Domse.Core;
 using Eumel.Domse.Core.Services;
 using Eumel.Domse.Specflow.Drivers;
 using FluentAssertions;

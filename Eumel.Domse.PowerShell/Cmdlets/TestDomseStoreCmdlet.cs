@@ -1,5 +1,4 @@
 ﻿using System.Management.Automation;
-using Eumel.Domse.Core.Exceptions;
 using Eumel.Domse.Core.Model;
 
 namespace Eumel.Domse.PowerShell.Cmdlets

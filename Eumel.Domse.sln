@@ -13,13 +13,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eumel.Domse.BusinessLogic",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eumel.Domse.WebService", "Eumel.Domse.WebService\Eumel.Domse.WebService.csproj", "{E4B0E567-85FD-4963-8489-08BEC96CD53B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eumel.Domse.WebService.Tests", "Eumel.Domse.WebService.Tests\Eumel.Domse.WebService.Tests.csproj", "{47C36839-7A44-4A64-9B42-24CB04F228B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eumel.Domse.WebService.Tests", "Eumel.Domse.WebService.Tests\Eumel.Domse.WebService.Tests.csproj", "{47C36839-7A44-4A64-9B42-24CB04F228B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eumel.Domse.BusinessLogic.Tests", "Eumel.Domse.BusinessLogic.Tests\Eumel.Domse.BusinessLogic.Tests.csproj", "{73DEC1BF-E2CA-4744-9EE6-17C5493FCF83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eumel.Domse.BusinessLogic.Tests", "Eumel.Domse.BusinessLogic.Tests\Eumel.Domse.BusinessLogic.Tests.csproj", "{73DEC1BF-E2CA-4744-9EE6-17C5493FCF83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eumel.Domse.Core.Tests", "Eumel.Domse.Core.Tests\Eumel.Domse.Core.Tests.csproj", "{6D7B6753-5931-4573-9D23-4733BE9E8314}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eumel.Domse.Core.Tests", "Eumel.Domse.Core.Tests\Eumel.Domse.Core.Tests.csproj", "{6D7B6753-5931-4573-9D23-4733BE9E8314}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eumel.Domse.PowerShell.Tests", "Eumel.Domse.PowerShell.Tests\Eumel.Domse.PowerShell.Tests.csproj", "{6C40C142-3024-44B6-A1A9-BF750AB5662F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eumel.Domse.PowerShell.Tests", "Eumel.Domse.PowerShell.Tests\Eumel.Domse.PowerShell.Tests.csproj", "{6C40C142-3024-44B6-A1A9-BF750AB5662F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eumel.Domse.Database", "Eumel.Domse.Database\Eumel.Domse.Database.csproj", "{D9E99115-1304-4107-9198-450BE6DE31B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eumel.Domse.Database.Tests", "Eumel.Domse.Database.Tests\Eumel.Domse.Database.Tests.csproj", "{38DD970B-5367-4724-9D01-516F4FDF01AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +67,14 @@ Global
 		{6C40C142-3024-44B6-A1A9-BF750AB5662F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C40C142-3024-44B6-A1A9-BF750AB5662F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C40C142-3024-44B6-A1A9-BF750AB5662F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9E99115-1304-4107-9198-450BE6DE31B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9E99115-1304-4107-9198-450BE6DE31B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9E99115-1304-4107-9198-450BE6DE31B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9E99115-1304-4107-9198-450BE6DE31B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38DD970B-5367-4724-9D01-516F4FDF01AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38DD970B-5367-4724-9D01-516F4FDF01AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38DD970B-5367-4724-9D01-516F4FDF01AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38DD970B-5367-4724-9D01-516F4FDF01AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
